@@ -1,4 +1,8 @@
 import 'package:final_project/constants/r.dart';
+import 'package:final_project/helpers/preference_helper.dart';
+import 'package:final_project/models/network_response.dart';
+import 'package:final_project/models/user_by_email.dart';
+import 'package:final_project/repository/auth_api.dart';
 import 'package:final_project/views/register_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
