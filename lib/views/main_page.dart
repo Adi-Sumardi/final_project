@@ -1,4 +1,7 @@
 import 'package:final_project/constants/r.dart';
+import 'package:final_project/views/main/discussion/chat_page.dart';
+import 'package:final_project/views/main/latihan_soal/home_page.dart';
+import 'package:final_project/views/main/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -32,7 +35,7 @@ class _MainPageState extends State<MainPage> {
         controller: _pc,
         physics: NeverScrollableScrollPhysics(),
         children: [
-          homePage(), //0
+          HomePage(), //0
           // ChatPage(),
           ProfilePage(), //1
         ],
