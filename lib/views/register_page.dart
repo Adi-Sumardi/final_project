@@ -23,7 +23,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   String gender = "Laki-laki";
   String selectedClass = "10";
-  final emailNameController = TextEditingController();
+  final emailController = TextEditingController();
   final schoolNameController = TextEditingController();
   final fullNameController = TextEditingController();
 
@@ -131,12 +131,13 @@ class _RegisterPageState extends State<RegisterPage> {
                 controller: emailController,
                 hintText: 'Email Anda',
                 title: "Email",
-                enable: false,
+                enabled: false,
               ),
               RegisterTextField(
-                controller: fullNameController,
                 hintText: 'Nama Lengkap Anda',
                 title: "Nama Lengkap",
+                controller: fullNameController, 
+                enabled: false,
               ),
               SizedBox(
                 height: 5,
@@ -165,7 +166,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                   : Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
-                            side: BorderSider(
+                            side: BorderSide(
                                 width: 1, color: R.colors.greyBorder),
                           ),
                         ),
@@ -196,7 +197,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               : Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
-                            side: BorderSider(
+                            side: BorderSide(
                                 width: 1, color: R.colors.greyBorder),
                           ),
                         ),
@@ -255,7 +256,8 @@ class _RegisterPageState extends State<RegisterPage> {
               RegisterTextField(
                 hintText: 'Nama Sekolah',
                 title: "Nama Sekolah",
-                controller: schoolNameController,
+                controller: schoolNameController, 
+                enabled: false,
               ),
               //Spacer(),
             ],
