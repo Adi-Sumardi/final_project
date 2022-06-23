@@ -56,15 +56,15 @@ class _RegisterPageState extends State<RegisterPage> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight + 20),
         child: AppBar(
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(20.0),
             bottomRight: Radius.circular(25.0),
           )),
           elevation: 0,
           backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: Colors.black),
-          title: Text(
+          iconTheme: const IconThemeData(color: Colors.black),
+          title: const Text(
             "Yuk isi data diri!",
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.w700, fontSize: 18),
@@ -101,7 +101,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 }
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
+                  const SnackBar(
                     content:
                         Text("Terjadi kesalahan, silahkan ulangin kembali"),
                   ),
@@ -112,7 +112,7 @@ class _RegisterPageState extends State<RegisterPage> {
             borderColor: R.colors.primary,
             child: Text(
               R.strings.daftar,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -139,17 +139,17 @@ class _RegisterPageState extends State<RegisterPage> {
                 controller: fullNameController, 
                 enabled: false,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                 "Jenis Kelamin",
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
@@ -180,7 +180,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             color: gender.toLowerCase() ==
                                     "Laki-laki".toLowerCase()
                                 ? Colors.white
-                                : Color(0xff282828),
+                                : const Color(0xff282828),
                           ),
                         ),
                       ),
@@ -210,7 +210,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             fontSize: 14,
                             color: gender == "Perempuan"
                                 ? Colors.white
-                                : Color(0xff282828),
+                                : const Color(0xff282828),
                           ),
                         ),
                       ),
@@ -218,18 +218,18 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ],
               ),
-              SizedBox(height: 5),
-              Text(
+              const SizedBox(height: 5),
+              const Text(
                 "Kelas",
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 14),
+                padding:const EdgeInsets.symmetric(horizontal: 14),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: Colors.white,
@@ -252,7 +252,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               RegisterTextField(
                 hintText: 'Nama Sekolah',
                 title: "Nama Sekolah",

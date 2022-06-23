@@ -66,11 +66,11 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Image.asset(R.assets.imgLogin),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
             Text(
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                 color: R.colors.greySubtitle,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             ButtonLogin(
               onTap: () async {
                 await signInWithGoogle();
@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                     }
                   }
                 } else {
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                     content: Text("Gagal Masuk"),
                     duration: Duration(seconds: 2),
                   ));
@@ -110,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(R.assets.icGoogle),
-                  SizedBox(width: 15,),
+                  const SizedBox(width: 15,),
                   Text(
                     R.strings.loginWithGoogle,
                     style: TextStyle(
@@ -134,10 +134,10 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(R.assets.icApple),
-                  SizedBox(width: 15,),
+                  const SizedBox(width: 15,),
                   Text(
                     R.strings.loginWithApple,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Colors.white,

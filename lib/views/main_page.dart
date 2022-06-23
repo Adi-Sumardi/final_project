@@ -33,11 +33,11 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: _buildBottomNavigation(),
       body: PageView(
         controller: _pc,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: [
-          HomePage(), //0
+          const HomePage(), //0
           // ChatPage(),
-          ProfilePage(), //1
+          const ProfilePage(), //1
         ],
       ),
     );
@@ -65,7 +65,7 @@ class _MainPageState extends State<MainPage> {
                       onTap: () {
                         index = 0;
                         _pc.animateToPage(index,
-                            duration: Duration(milliseconds: 500),
+                            duration: const Duration(milliseconds: 500),
                             curve: Curves.bounceInOut);
 
                         setState(() {});
@@ -77,7 +77,7 @@ class _MainPageState extends State<MainPage> {
                             height: 20,
                             color: index == 0 ? null : Colors.grey,
                           ),
-                          Text("Home"),
+                          const Text("Home"),
                         ],
                       ),
                     ),
@@ -98,7 +98,7 @@ class _MainPageState extends State<MainPage> {
                               height: 20,
                             ),
                           ),
-                          Text("Diskusi"),
+                          const Text("Diskusi"),
                         ],
                       ),
                     ),
@@ -114,7 +114,7 @@ class _MainPageState extends State<MainPage> {
                         print("profile");
                         index = 1;
                         _pc.animateToPage(index, 
-                        duration: Duration(milliseconds: 500), 
+                        duration: const Duration(milliseconds: 500), 
                         curve: Curves.easeInOut,);
 
                         setState(() {
@@ -128,7 +128,7 @@ class _MainPageState extends State<MainPage> {
                             height: 20,
                             color: index == 1 ? null : Colors.grey,
                           ),
-                          Text("Profile"),
+                          const Text("Profile"),
                         ],
                       ),
                     ),
